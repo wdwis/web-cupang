@@ -1,0 +1,621 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+
+.deskripsi{
+  font-family: 'Fira Sans', sans-serif;
+  padding-top: 20px;
+}
+.des{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+.des p{
+  width: fit-content;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0d0925;
+  border-bottom: 3px solid #0d0925;
+  padding-bottom: 3px;
+}
+/* gvhvhvjvjvg */
+.wrip{
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+}
+.kotak{
+  position: relative;
+  height: 370px;
+  width: 850px;
+  border-radius: 25px;
+  background: #2ec574;
+  box-shadow: 0px 10px 50px rgba(252,56,56,.3);
+  margin-top: 20px;
+}
+.slid-1{
+  position: absolute;
+  display: flex;
+  height: 360px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
+}
+.slid-1 .imgg{
+  height: 260px;
+  width: 260px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 2px 3px 15px rgba(252,56,56,.1);
+}
+.slid-1 .imgg img{
+  height: 100%;
+  width: 100%; 
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0;
+  transition: .6s;
+}
+#tap1-1:checked ~ .slid-1 .img1,
+#tap1-2:checked ~ .slid-1 .img2{
+  opacity: 1;
+  transition-delay: .2s;
+}
+.kotak .ket{
+  padding: 0 20px 0 35px;
+  width: 530px;
+  margin-left: 50px;
+  opacity: 0;
+  transition: .6s;
+}
+#imgtap1:checked ~ .slid-1 .ket{
+  display: none;
+}
+#tap1-1:checked ~ .slid-1 .ket-1,
+#tap1-2:checked ~ .slid-1 .ket-2{
+  opacity: 1;
+  margin-left: 0px;
+  z-index: 100;
+  transition-delay: .3s;
+}
+.kotak .ket .judul{
+  font-size: 30px;
+  font-weight: 700;
+  color: #0d0925;
+  margin-bottom: 10px;
+}
+.kotak .ket .keterangan{
+  color: black;
+  font-size: 19px;
+  margin-bottom: 30px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+.kotak .slider{
+  position: absolute;
+  bottom: 25px;
+  left: 17%;
+  transform: translateX(-50%);
+  z-index: 12;
+}
+#imgtap1:checked ~ .kotak .slider{
+  display: none;
+}
+.kotak .slider .tab{
+  position: relative;
+  height: 10px;
+  width: 50px;
+  background: #d9d9d9;
+  border-radius: 5px;
+  display: inline-flex;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.kotak .slider .tab:hover{
+  background: #cccccc;
+}
+.kotak .slider .tab:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: -100%;
+  background: linear-gradient(147deg,#f6b323 0%, #f23b26 74%);
+  border-radius: 10px;
+  transform: scaleX(0);
+  transition: transform .6s;
+  transform-origin: left;
+}
+.kotak input[type="radio"],
+.kotak input[type="checkbox"]{
+  display: none;
+}
+#tap1-1:checked ~ .slider .tap1-1:before,
+#tap1-2:checked ~ .slider .tap1-2:before{
+  transform: scaleX(1);
+  width: 100%;
+}
+
+/* kotak2 */
+.wrip-kotak2{
+  display: flex;
+  justify-content: right;
+}
+.wrip-kotak2 .kotak2{
+  position: relative;
+  height: 370px;
+  width: 850px;
+  border-radius: 25px;
+  background: #2ec574;
+  box-shadow: 0px 10px 50px rgba(252,56,56,.3);
+  margin-top: 20px;
+}
+.slid{
+  position: absolute;
+  display: flex;
+  height: 360px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
+}
+.slid .imgg{
+  height: 260px;
+  width: 260px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 2px 3px 15px rgba(252,56,56,.1);
+}
+.slid .imgg img{
+  height: 100%;
+  width: 100%; 
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0;
+  transition: .6s;
+}
+#tap2-1:checked ~ .slid .img1,
+#tap2-2:checked ~ .slid .img2{
+  opacity: 1;
+  transition-delay: .2s;
+}
+.slid .ket{
+  padding: 0 20px 0 35px;
+  width: 530px;
+  margin-left: 50px;
+  opacity: 0;
+  transition: .6s;
+}
+#imgtap2:checked ~ .slid .ket{
+  display: none;
+}
+#tap2-1:checked ~ .slid .ket-1,
+#tap2-2:checked ~ .slid .ket-2{
+  opacity: 1;
+  margin-left: 0px;
+  z-index: 100;
+  transition-delay: .3s;
+}
+.slid .ket .judul{
+  font-size: 30px;
+  font-weight: 700;
+  color: #0d0925;
+  margin-bottom: 20px;
+}
+.slid .ket .keterangan{
+  color: black;
+  font-size: 19px;
+  margin-bottom: 30px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+.slider2{
+  position: absolute;
+  bottom: 25px;
+  left: 81%;
+  transform: translateX(-50%);
+  z-index: 12;
+}
+#imgtap2:checked ~ .slider2{
+  display: none;
+}
+.slider2 .tab2{
+  position: relative;
+  height: 10px;
+  width: 50px;
+  background: #d9d9d9;
+  border-radius: 5px;
+  display: inline-flex;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.slider2 .tab2:hover{
+  background: #cccccc;
+}
+.slider2 .tab2:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: -100%;
+  background: linear-gradient(147deg,#f6b323 0%, #f23b26 74%);
+  border-radius: 10px;
+  transform: scaleX(0);
+  transition: transform .6s;
+  transform-origin: left;
+}
+.kotak2 input[type="radio"],
+.kotak2 input[type="checkbox"]{
+  display: none;
+}
+#tap2-1:checked ~ .slider2 .tap2-1:before,
+#tap2-2:checked ~ .slider2 .tap2-2:before{
+  transform: scaleX(1);
+  width: 100%;
+}
+
+
+/* kotak3 */
+.wrip-kotak3{
+  display: flex;
+  justify-content: left;
+}
+.wrip-kotak3 .kotak3{
+  position: relative;
+  height: 370px;
+  width: 95%;
+  max-width: 850px;
+  border-radius: 25px;
+  background: #2ec574;
+  box-shadow: 0px 10px 50px rgba(252,56,56,.3);
+  margin-top: 20px;
+}
+.slid3{
+  position: absolute;
+  display: flex;
+  height: 360px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
+}
+.slid3 .imgg{
+  height: 260px;
+  width: 260px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 2px 3px 15px rgba(252,56,56,.1);
+}
+.slid3 .imgg img{
+  height: 100%;
+  width: 100%; 
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0;
+  transition: .6s;
+}
+#tap3-1:checked ~ .slid3 .img1,
+#tap3-2:checked ~ .slid3 .img2{
+  opacity: 1;
+  transition-delay: .2s;
+}
+.slid3 .ket{
+  padding: 0 20px 0 35px;
+  width: 530px;
+  margin-left: 50px;
+  opacity: 0;
+  transition: .6s;
+}
+#imgtap3:checked ~ .slid3 .ket{
+  display: none;
+}
+#tap3-1:checked ~ .slid3 .ket-1,
+#tap3-2:checked ~ .slid3 .ket-2{
+  opacity: 1;
+  margin-left: 0px;
+  z-index: 100;
+  transition-delay: .3s;
+}
+.slid3 .ket .judul{
+  font-size: 30px;
+  font-weight: 700;
+  color: #0d0925;
+  margin-bottom: 20px;
+}
+.slid3 .ket .keterangan{
+  color: black;
+  font-size: 19px;
+  margin-bottom: 30px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+.slider3{
+  position: absolute;
+  bottom: 25px;
+  left: 17%;
+  transform: translateX(-50%);
+  z-index: 12;
+}
+#imgtap3:checked ~ .slider3{
+  display: none;
+}
+.slider3 .tab3{
+  position: relative;
+  height: 10px;
+  width: 50px;
+  background: #d9d9d9;
+  border-radius: 5px;
+  display: inline-flex;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.slider3 .tab3:hover{
+  background: #cccccc;
+}
+.slider3 .tab3:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: -100%;
+  background: linear-gradient(147deg,#f6b323 0%, #f23b26 74%);
+  border-radius: 10px;
+  transform: scaleX(0);
+  transition: transform .6s;
+  transform-origin: left;
+}
+.kotak3 input[type="radio"],
+.kotak3 input[type="checkbox"]{
+  display: none;
+}
+#tap3-1:checked ~ .slider3 .tap3-1:before,
+#tap3-2:checked ~ .slider3 .tap3-2:before{
+  transform: scaleX(1);
+  width: 100%;
+}
+
+
+/* kotak4 */
+.wrip-kotak4{
+  display: flex;
+  justify-content: right;
+}
+.wrip-kotak4 .kotak4{
+  position: relative;
+  height: 370px;
+  width: 95%;
+  max-width: 850px;
+  border-radius: 25px;
+  background: #2ec574;
+  box-shadow: 0px 10px 50px rgba(252,56,56,.3);
+  margin-top: 20px;
+}
+.slid4{
+  position: absolute;
+  display: flex;
+  height: 360px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
+}
+.slid4 .imgg{
+  height: 260px;
+  width: 260px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 2px 3px 15px rgba(252,56,56,.1);
+}
+.slid4 .imgg img{
+  height: 100%;
+  width: 100%; 
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0;
+  transition: .6s;
+}
+#tap4-1:checked ~ .slid4 .img1,
+#tap4-2:checked ~ .slid4 .img2{
+  opacity: 1;
+  transition-delay: .2s;
+}
+.slid4 .ket{
+  padding: 0 20px 0 35px;
+  width: 530px;
+  margin-left: 50px;
+  opacity: 0;
+  transition: .6s;
+}
+#imgtap4:checked ~ .slid4 .ket{
+  display: none;
+}
+#tap4-1:checked ~ .slid4 .ket-1,
+#tap4-2:checked ~ .slid4 .ket-2{
+  opacity: 1;
+  margin-left: 0px;
+  z-index: 100;
+  transition-delay: .3s;
+}
+.slid4 .ket .judul{
+  font-size: 30px;
+  font-weight: 700;
+  color: #0d0925;
+  margin-bottom: 20px;
+}
+.slid4 .ket .keterangan{
+  color: black;
+  font-size: 19px;
+  margin-bottom: 30px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+.slider4{
+  position: absolute;
+  bottom: 25px;
+  left: 81%;
+  transform: translateX(-50%);
+  z-index: 12;
+}
+#imgtap4:checked ~ .slider4{
+  display: none;
+}
+.slider4 .tab4{
+  position: relative;
+  height: 10px;
+  width: 50px;
+  background: #d9d9d9;
+  border-radius: 5px;
+  display: inline-flex;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.slider4 .tab4:hover{
+  background: #cccccc;
+}
+.slider4 .tab4:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: -100%;
+  background: linear-gradient(147deg,#f6b323 0%, #f23b26 74%);
+  border-radius: 10px;
+  transform: scaleX(0);
+  transition: transform .6s;
+  transform-origin: left;
+}
+.kotak4 input[type="radio"],
+.kotak4 input[type="checkbox"]{
+  display: none;
+}
+#tap4-1:checked ~ .slider4 .tap4-1:before,
+#tap4-2:checked ~ .slider4 .tap4-2:before{
+  transform: scaleX(1);
+  width: 100%;
+}
+
+
+
+/* kotak5 */
+.wrip-kotak5{
+  display: flex;
+  justify-content: left;
+}
+.wrip-kotak5 .kotak5{
+  position: relative;
+  height: 370px;
+  width: 95%;
+  max-width: 850px;
+  border-radius: 25px;
+  background: #2ec574;
+  box-shadow: 0px 10px 50px rgba(252,56,56,.3);
+  margin-top: 20px;
+}
+.slid5{
+  position: absolute;
+  display: flex;
+  height: 360px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
+}
+.slid5 .imgg{
+  height: 260px;
+  width: 260px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 2px 3px 15px rgba(252,56,56,.1);
+}
+.slid5 .imgg img{
+  height: 100%;
+  width: 100%; 
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0;
+  transition: .6s;
+}
+#tap5-1:checked ~ .slid5 .img1,
+#tap5-2:checked ~ .slid5 .img2{
+  opacity: 1;
+  transition-delay: .2s;
+}
+.slid5 .ket{
+  padding: 0 20px 0 35px;
+  width: 530px;
+  margin-left: 50px;
+  opacity: 0;
+  transition: .6s;
+}
+#imgtap5:checked ~ .slid5 .ket{
+  display: none;
+}
+#tap5-1:checked ~ .slid5 .ket-1,
+#tap5-2:checked ~ .slid5 .ket-2{
+  opacity: 1;
+  margin-left: 0px;
+  z-index: 100;
+  transition-delay: .3s;
+}
+.slid5 .ket .judul{
+  font-size: 30px;
+  font-weight: 700;
+  color: #0d0925;
+  margin-bottom: 20px;
+}
+.slid5 .ket .keterangan{
+  color: black;
+  font-size: 19px;
+  margin-bottom: 30px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+.slider5{
+  position: absolute;
+  bottom: 25px;
+  left: 81%;
+  transform: translateX(-50%);
+  z-index: 12;
+}
+#imgtap5:checked ~ .slider5{
+  display: none;
+}
+.slider5 .tab5{
+  position: relative;
+  height: 10px;
+  width: 50px;
+  background: #d9d9d9;
+  border-radius: 5px;
+  display: inline-flex;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.slider5 .tab5:hover{
+  background: #cccccc;
+}
+.slider5 .tab5:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: -100%;
+  background: linear-gradient(147deg,#f6b323 0%, #f23b26 74%);
+  border-radius: 10px;
+  transform: scaleX(0);
+  transition: transform .6s;
+  transform-origin: left;
+}
+.kotak5 input[type="radio"],
+.kotak5 input[type="checkbox"]{
+  display: none;
+}
+#tap5-1:checked ~ .slider5 .tap5-1:before,
+#tap5-2:checked ~ .slider5 .tap5-2:before{
+  transform: scaleX(1);
+  width: 100%;
+}

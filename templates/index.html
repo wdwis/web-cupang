@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="static/css/deskripsi.css">
+        <link rel="stylesheet" href="static/css/responsif.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <section class="home" id="home">
+            <div class="bg">
+                <img src="static/img/abc.png" alt="">
+            </div>
+            <div class="nav-container">
+                <div class="nav-wrapper" id="navbar">
+                    <div class="logo"><a id="a" href="/">cupang</a></div>
+                    <div class="menu-toggle" id="menu-togle" onclick="ganti()">
+                      <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <ul class="menu">
+                        <li><a id="b" class="menu-link" href="#prediksi">prediksi</a></li>
+                        <li><a id="c" class="menu-link" href="#deskripsi">deskripsi</a></li>
+                    </ul>
+                </div>
+                <ul class="menu_" id="menu_" onclick="hilang()">
+                  <a href="#prediksi"><li>prediksi</li></a>
+                  <a href="#deskripsi"><li>deskripsi</li></a>
+                </ul>
+                <div class="container hero">
+                    <div class="conten-kiri">
+                        <h1 class="heading">mengenali Jenis Ikan Cupang Hias Menggunakan Foto</h1>                            
+                        <p class="sub-heading">sistem ini dapat membantu anda dalam mengenali jenis ikan cupang hias
+                           melalui sebuah foto. sistem juga dapat membedakan cupang jantan dan cupang betina.</p>
+                        <a href="#prediksi" class="btn-klasifikasi call-to-btn">upload foto <i class="fa-regular fa-circle-right"></i></a>
+                    </div>                
+                    <div class="conten-kanan">
+                        <div class="img-wrapper">
+                            <img src="static/img/logo.svg" alt="">
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>     
+
+
+        <!-- PREDIKSI  -->
+        <section class="klasifikasi container" id="prediksi">
+          <div class="kenali"><p>prediksi jenis ikan cupang</p></div>
+            <div class="klasif-wrapper">
+              <div class="in">
+                <div class="drag-area">
+                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <header>choose file to Upload image</header>
+                </div>
+                <p id="p" style="text-align: center; margin-top: 15px; color: red;" value="{{error}}">{{error}}</p>
+                <form class = "file-form" action="/hasil" method="post", enctype="multipart/form-data">
+                  <input class="file" type="file" , name="file"/>
+                  <button class="pred-btn">Prediksi</button>
+                </form> 
+              </div>
+              <div class="panduan">  
+                <h1>ketentuan gambar ikan cupang</h1>
+                <ol class="ketentuan">
+                  <li>hanya terdepat satu ikan cupang didalam foto.</li>
+                  <li>format foto yang dapat diguankan hanya .JPEG, .jpg dan .png.</li>
+                  <li>ikan cupang didalam foto harus terliahat dengan jelas bentuk tubuh dan ekornya.</li>
+                </ol>
+                <h3>perhatikan kentenuan gambar agar mendapat hasil prediksi yang akurat!!</h3>
+              </div>
+            </div>
+        </section>
+
+
+        <!-- deskripsi -->
+        <section class="deskripsi container" id="deskripsi">
+          <div class="des"><p>jenis-jenis ikan cupang</p></div>
+            <div class="wrip">
+                <div class="kotak">
+                  <input type="radio" name="pilih" id="tap1-1" checked>
+                  <input type="radio" name="pilih" id="tap1-2">
+                  <div class="slider">
+                    <label for="tap1-1" class="tab tap1-1"></label>
+                    <label for="tap1-2" class="tab tap1-2"></label>
+                  </div>
+                  <div class="slid-1">
+                    <label for="imgtap1" class="imgg">
+                      <img class="img1" src="static/img/plakat1.jpg" loading="lazy"/>
+                    </label>
+                    <div class="ket ket-1">
+                      <div class="judul">cupang plakat</div>
+                      <div class="keterangan">Cupang Plakat Ikan cupang ini memiliki ekor yang lebih
+                        pendekdibandingkan jenis lainnya. Plakat sendiri berasal dari bahasa Thailand yang 
+                        artinya aduan. Jenis Plakat memiliki kemampuan berenang yang lebih cepat dibandingkan 
+                        dengan jenis cupang lainnya karena tidak terbebani oleh sirip yang kompleks.</div>
+                    </div>
+                  </div>
+                  <div class="slid-1">
+                    <label for="imgtap1" class="imgg">
+                      <img class="img2" src="static/img/plakat2.jpg">
+                    </label>
+                    <div class="ket ket-2">
+                      <div class="judul">Lorem Ipsum Dolor</div>
+                      <div class="keterangan"> Cupang Plakat Ikan cupang ini memiliki ekor yang lebih
+                        pendekdibandingkan jenis lainnya. Plakat sendiri berasal dari bahasa Thailand yang 
+                        artinya aduan. Jenis Plakat memiliki kemampuan berenang yang lebih cepat dibandingkan 
+                        dengan jenis cupang lainnya karena tidak terbebani oleh sirip yang kompleks.</div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="wrip-kotak2">
+                <div class="kotak2">
+                  <input type="radio" name="pilih2" id="tap2-1" checked>
+                  <input type="radio" name="pilih2" id="tap2-2">
+                  <div class="slider2">
+                    <label for="tap2-1" class="tab2 tap2-1"></label>
+                    <label for="tap2-2" class="tab2 tap2-2"></label>
+                  </div>
+                  <div class="slid">     
+                      <div class="ket ket-1">
+                          <div class="judul">cupang halfmoon</div>
+                          <div class="keterangan">Ikan cupang halfmoon merupakan jenis ikan cupang hias yang memiliki
+                            ekor dan sirip yang terlihat seperti menyatu membentuk setengah lingkaran. Jika
+                            dilihat dari samping Cupang Halfmoon memiliki ekor berbentuk seperti bulan
+                            setengah. </div>
+                        </div>
+                        <label for="imgtap2" class="imgg">
+                            <img class="img1" src="static/img/cupang2.jpg">
+                        </label>  
+                  </div>
+                  <div class="slid">
+                      <div class="ket ket-2">
+                          <div class="judul">cupang halfmoon</div>
+                          <div class="keterangan">Ikan cupang halfmoon merupakan jenis ikan cupang hias yang memiliki
+                            ekor dan sirip yang terlihat seperti menyatu membentuk setengah lingkaran. Jika
+                            dilihat dari samping Cupang Halfmoon memiliki ekor berbentuk seperti bulan
+                            setengah. </div>
+                        </div>
+                        <label for="imgtap2" class="imgg">
+                          <img class="img2" src="static/img/hm2.jpg">
+                        </label>
+                  </div>
+                </div>
+            </div>   
+            <div class="wrip-kotak3">
+                <div class="kotak3">
+                  <input type="radio" name="pilih3" id="tap3-1" checked>
+                  <input type="radio" name="pilih3" id="tap3-2">
+                  <div class="slider3">
+                    <label for="tap3-1" class="tab3 tap3-1"></label>
+                    <label for="tap3-2" class="tab3 tap3-2"></label>
+                  </div>
+                  <div class="slid3">    
+                      <label for="imgtap3" class="imgg">
+                          <img class="img1" src="static/img/ct.jpg">
+                        </label>  
+                      <div class="ket ket-1">
+                          <div class="judul">cupang Crowntail</div>
+                          <div class="keterangan">Crowntail merupakan cupang hias silangan asli dari indonesia. Bentuk
+                            sirip cupang ini sangat khas, yaitu tulang ekornya terlihat panjang dan kuat.
+                            Disebut cupang serit karena perpanjangan tulang sirip-sirip ekor, perut dan
+                            punggungnya memanjang dan bila terbuka menyerupai serit.</div>
+                        </div>
+                  </div>
+                  <div class="slid3">
+                      <label for="imgtap3" class="imgg">
+                        <img class="img2" src="static/img/ct2.jpeg">
+                      </label>
+                      <div class="ket ket-2">
+                          <div class="judul">cupang Crowntail</div>
+                          <div class="keterangan">Crowntail merupakan cupang hias silangan asli dari indonesia. Bentuk
+                            sirip cupang ini sangat khas, yaitu tulang ekornya terlihat panjang dan kuat.
+                            Disebut cupang serit karena perpanjangan tulang sirip-sirip ekor, perut dan
+                            punggungnya memanjang dan bila terbuka menyerupai serit.</div>
+                        </div>
+                  </div>
+                </div>
+            </div>    
+            <div class="wrip-kotak4">
+                    <div class="kotak4">
+                      <input type="radio" name="pilih4" id="tap4-1" checked>
+                      <input type="radio" name="pilih4" id="tap4-2">
+                      <div class="slider4">
+                        <label for="tap4-1" class="tab4 tap4-1"></label>
+                        <label for="tap4-2" class="tab4 tap4-2"></label>
+                      </div>
+                      <div class="slid4">     
+                          <div class="ket ket-1">
+                              <div class="judul">cupang halfmoon plakat (HMPK)</div>
+                              <div class="keterangan">Cupang Halfmoon plakat atau biasa di singkat HMPK merupakan jenis ikan
+                                cupang hasil perkawinan silang antara cupang jenis Halfmoon dengan cupang
+                                jenis Plakat. Cupang jenis ini memilik bentuk sirip dan ekor seperti cupang jenis
+                                plakat, namun bentuk siripnya lebih lebar hampir mendekati ukuran sirip cupang
+                                jenis halfmoon. </div>
+                            </div>
+                            <label for="imgtap4" class="imgg">
+                                <img class="img1" src="static/img/hmpk2.jpg">
+                              </label>  
+                      </div>
+                      <div class="slid4">
+                          <div class="ket ket-2">
+                              <div class="judul">cupang halfmoon plakat (HMPK)</div>
+                              <div class="keterangan">Cupang Halfmoon plakat atau biasa di singkat HMPK merupakan jenis ikan
+                                cupang hasil perkawinan silang antara cupang jenis Halfmoon dengan cupang
+                                jenis Plakat. Cupang jenis ini memilik bentuk sirip dan ekor seperti cupang jenis
+                                plakat, namun bentuk siripnya lebih lebar hampir mendekati ukuran sirip cupang
+                                jenis halfmoon.</div>
+                            </div>
+                            <label for="imgtap4" class="imgg">
+                              <img class="img2" src="static/img/hmpk.jpg">
+                            </label>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrip-kotak5">
+                <div class="kotak5">
+                  <input type="radio" name="pilih5" id="tap5-1" checked>
+                  <input type="radio" name="pilih5" id="tap5-2">
+                  <div class="slider5">
+                    <label for="tap5-1" class="tab5 tap5-1"></label>
+                    <label for="tap5-2" class="tab5 tap5-2"></label>
+                  </div>
+                  <div class="slid5">    
+                      <label for="imgtap5" class="imgg">
+                          <img class="img1" src="static/img/dt1.jpg">
+                        </label>  
+                      <div class="ket ket-1">
+                          <div class="judul">cupang double tail</div>
+                          <div class="keterangan">Ikan cupang Double Tail merupakan hasil mutasi genetik dari cupang
+                            halfmoon. Ikan cipang halfmoon memiliki keunikan dari cupang yang lainnya.
+                            Keunikannya yaitu memiliki dua ekor yang berbeda.</div>
+                        </div>
+                  </div>
+                  <div class="slid5">
+                      <label for="imgtap5" class="imgg">
+                        <img class="img2" src="static/img/dt2.PNG">
+                      </label>
+                      <div class="ket ket-2">
+                          <div class="judul">cupang double tail</div>
+                          <div class="keterangan">Ikan cupang Double Tail merupakan hasil mutasi genetik dari cupang
+                            halfmoon. Ikan cipang halfmoon memiliki keunikan dari cupang yang lainnya.
+                            Keunikannya yaitu memiliki dua ekor yang berbeda.</div>
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        <div onclick="tutop()"><i id="i" class=" "></i></div>
+        <footer>
+          <div class="container footer-wrapper">
+              <div class="foot">
+                <div class="umj">
+                  <img src="static/img/logo_UMJ.png" alt="">
+                  <p>universitas muhammadyah jember</p>
+                </div>
+                <div class="w"><i class="fa-solid fa-user"></i><p>wahyu dwi setyawan</p></div>
+                <div class="e"><i class="fa-solid fa-envelope"></i><p>wahyudwis117@gmail.com</p></div>
+              </div>
+          </div>
+      </footer>
+      <div class="crd">
+        <i class="fa-regular fa-copyright"></i>
+        <p>copyright 2022</p>
+      </div>     
+        <script type="text/javascript" src="static/js/abc.js"></script>
+      </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/hasil.css">
+    <link rel='stylesheet' href={{url_for('static' , filename = 'static/css/hasil.css')}}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+            <div class="nav-wrapper" id="navbar">
+                <div class="logo"><a id="a" href="/">cupang</a></div>
+                <div class="menu-toggle" id="menu-togle" onclick="ganti()">
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="menu">
+                    <li><a id="b" class="menu-link" href="/#prediksi">prediksi</a></li>
+                    <li><a id="c" class="menu-link" href="/#deskripsi">deskripsi</a></li>
+                </ul>
+            </div>
+            <ul class="menu_" id="menu_">
+                <a href="/#prediksi"><li>prediksi</li></a>
+                <a href="/#deskripsi"><li>deskripsi</li></a>
+            </ul>
+    </div>
+    <div class="hasil container">
+        <h1>hasil prediksi</h1>
+        <div class="kotak">
+            <div class="img">
+                <img src={{url_for('static', filename = 'images/'+ img)}} alt="">
+            </div>
+            <div class="prediksi">
+                <table>
+                    <tr>
+                        <th style="width: 80px;"> </th>
+                        <th style="width: 200px;">jenis</th>
+                        <th style="width: 200px;">possibility</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>{{ predictions.class1 }}</td>
+                        <td>{{ predictions.prob1 }} %</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>{{ predictions.class2 }}</td>
+                        <td>{{ predictions.prob2 }} %</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>{{ predictions.class3 }}</td>
+                        <td>{{ predictions.prob3 }} %</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container footer-wrapper">
+            <div class="foot">
+              <div class="umj">
+                <img src="static/img/logo_UMJ.png" alt="">
+                <p>universitas muhammadyah jember</p>
+              </div>
+              <div class="w"><i class="fa-solid fa-user"></i><p>wahyu dwi setyawan</p></div>
+              <div class="e"><i class="fa-solid fa-envelope"></i><p>wahyudwis117@gmail.com</p></div>
+            </div>
+        </div>
+        <div class="crd">
+          <i class="fa-regular fa-copyright"></i>
+          <p>copyright 2022</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="static/js/abc.js"></script>
+</body>
+</html>
